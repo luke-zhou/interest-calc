@@ -13,4 +13,14 @@ Naming/MethodParameterName:
   Enabled: false
 Style/AccessModifierDeclarations:
   EnforcedStyle: 'inline'
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+Style/BlockComments:
+  Exclude:
+    - 'spec/spec_helper.rb'
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - 'spec/spec_helper.rb'
+
 

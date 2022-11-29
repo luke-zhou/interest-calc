@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 module Calc
   class Term
     attr_reader :num, :unit
 
-    INPUT_REGX = /^(\d)*\s+(month|quarter|year|)s?$/
+    INPUT_REGX = /^(\d)*\s+(month|quarter|year|)s?$/.freeze
 
     def initialize(num, unit)
       @num = num.to_i

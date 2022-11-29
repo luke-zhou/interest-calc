@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 module Calc
   class Option
     attr_reader :option
 
-    INPUT_REGX = /^(Monthly|Quarterly|Annually|Maturity)$/
+    INPUT_REGX = /^(Monthly|Quarterly|Annually|Maturity)$/.freeze
 
     def initialize(option)
       @option = option.to_sym
@@ -16,16 +18,16 @@ module Calc
     end
 
     def value(term)
-        case @option
-        when :Monthly
-            1
-        when :Quarterly
-            3
-        when :Annually
-            12
-        when :Maturity
-            term.value
-        end
+      case @option
+      when :Monthly
+        1
+      when :Quarterly
+        3
+      when :Annually
+        12
+      when :Maturity
+        term.value
+      end
     end
   end
 end
